@@ -1,0 +1,20 @@
+{
+  "name": "homework10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "vitest"
+  },
+  "author": "Oleksandr Wojtyla",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}

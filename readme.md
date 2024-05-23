@@ -30,7 +30,7 @@ Methods:
 - `delete`: deletes key-value pair from the hash table
 - private `resizeTable`: resizes the hash table when the load factor exceeds
 - `getTableSize`: returns size of a hash table
-- `settLoadFactor`: changes load factor
+- `setLoadFactor`: changes load factor
 
 ## Performance Analysis
 
@@ -51,7 +51,7 @@ Methods:
 - average case: O(1)
 - worst case: O(n) (if all keys hash to the same bucket)
 
-For collision handling was used separate chainign strategy. Each slot in the hash table array points to a list (array) of key-value pairs. This way, multiple elements can be stored in the same slot without overwriting each other.
+For collision handling was used separate chaining strategy. Each slot in the hash table array points to a list (array) of key-value pairs. This way, multiple elements can be stored in the same slot without overwriting each other.
 
 Using a larger table size reduces the probability of collisions, thus ensuring that operations are close to O(1). However, it increases memory usage. Resizing the table dynamically balances memory usage and performance but involves a temporary performance hit during resizing.
 

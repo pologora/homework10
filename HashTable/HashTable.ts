@@ -17,9 +17,15 @@ export class HashTable<T> {
 
   insert(key: string, value: T) {
     const hashedKey = this.hash(key);
-    this.table[hashedKey].push({ key, value });
+    const existedItem = this.table[hashedKey].find((item) => item.key === key);
 
-    this.length += 1;
+    if (!existedItem) {
+      this.table[hashedKey].push({ key, value });
+      this.length += 1;
+    } else {
+      existedItem.value = value;
+    }
+
     if (this.length + 1 > this.table.length * this.loadFactor) {
       this.resizeTable();
     }

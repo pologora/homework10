@@ -43,4 +43,13 @@ describe('Hash table', () => {
 
     expect(hashTable.getTableSize()).toBe(23);
   });
+  test('should correctly replace values in a hash map', () => {
+    hashTable.insert('a', 1);
+    hashTable.insert('a', 2);
+    hashTable.insert('a', 3);
+    hashTable.insert('a', 4);
+
+    expect(hashTable.get('a')).toBe(4);
+    expect(hashTable.length).toBe(1);
+  });
 });
